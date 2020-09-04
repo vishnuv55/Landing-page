@@ -27,6 +27,8 @@ body{
     align-items: center;
     justify-content: center;
     margin: 40px;
+    cursor: pointer;
+    z-index: 10000000;
     display: none;
 }
 
@@ -99,7 +101,7 @@ body{
 .content{
     background: white;
     margin: 70px;
-    height: 70vh;
+    min-height: 70vh;
     margin-top: 20vh;
     display: flex;
     flex-direction: column;
@@ -114,7 +116,7 @@ body{
     font-size: 2em;
     font-weight: bold;
     color:var(--primary);
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .paragraph{
@@ -124,7 +126,7 @@ body{
 
 iframe{
     margin: 20px;
-    width: 30vw;
+    width: 27vw;
 }
 
 .section-3{
@@ -133,4 +135,173 @@ iframe{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.boxes{
+    width: 25%;
+    min-height: 37vh;
+    border: 5px solid var(--heading);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5vw;
+    border-radius: 30px;
+}
+.boxes h2{
+    text-align: center;
+    padding: 5px;
+    color: var(--primary);
+}
+.boxes p{
+    padding: 5px;
+    
+}
+.sub-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-bottom: 10vh;
+}
+
+.footer {
+    padding: 20px;
+    background: #9494da;
+    text-align: center;
+}
+.contact-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding:7% 0 5% 0;
+    background: var(--heading);
+    clip-path: polygon(0% 20%, 50% 0%,100% 20%,100% 100%,0% 100%);
+}
+.contact{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 10px;
+    padding: 2%;
+}
+.contact form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+} 
+
+.contact form input{
+    width: 25vw;
+    padding: 6px;
+    margin: 10px;
+}
+contact form input:focus{
+    outline: none;
+    border: none;
+}
+.contact form textarea {
+    width: 25vw;
+    height: 20vh;
+    padding: 6px;
+    margin: 10px;
+    resize: none;
+}
+
+#submit{
+    width: 130px;
+    padding: 7px;
+    border: 2px solid var(--primary);
+    background: white;
+    color: var(--primary);
+    font-size: 15px;
+    font-weight: 600;
+    outline: none;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 760px) {
+    .header{
+        position: fixed;
+        background: white;
+        z-index: 100001;
+    }
+    .nav-bar{
+        position: fixed;
+        z-index: 10000;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background: var(--heading);
+        display: none;
+    }
+    .active{
+        display: flex;
+    }
+    .nav-links{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .menu-icon{
+        display: flex;
+    }
+    .logo-section{
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .header{
+        padding: 0;
+        margin: 0;
+    }
+    .logo{
+        margin-left: 27%;
+        width: 35vw;
+
+    }
+    .sub-container{
+        flex-direction: column;
+    }
+    .section-1{
+        padding-top: 90px;
+        height: 70vh;
+    }
+    .image1{
+        width: 90vw;
+        margin-top: 50px;
+    }
+    .heading{
+        text-align: center;
+    }
+    .content{
+        margin: 20vh 15px 70px 15px;
+        padding: 15px;
+    }
+    iframe{
+        width: 80vw;
+        height: auto;
+    }
+    .boxes{
+        width: 80vw;
+        min-height: 25vh;
+        margin: 20px;
+    }
+    .contact {
+        width: 80%;
+        margin-top: 70px;
+    }
+    .contact form input{
+        width: 70vw;
+    }
+    .contact form textarea{
+        width: 70vw;
+    }
 }
